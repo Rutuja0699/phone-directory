@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // functional component
 const Header = function () {
     return (
-        <div className="header">
+        <div style={{textAlign: 'center',padding: 20, background:'#000',color:'#fff',textTransform:'uppercase'}}>
             Phone Directory
         </div>
     )
