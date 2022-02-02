@@ -21,7 +21,7 @@ function App() {
    // <button> Add </button><div>
     //    <span> Name </span><br />
      //   <span> Phone </span>
-       <> <Header />
+       <> <Header heading='Phone Directory'/>
         <div className="component-body-container">
           <button className="custom-btn add-btn">Add</button>
 
