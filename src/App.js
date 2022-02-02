@@ -15,7 +15,7 @@ function App() {
       }
     ]
 
-
+    
     return (
    // <><Header/>
    // <button> Add </button><div>
@@ -28,6 +28,8 @@ function App() {
           <div className="grid-container heading-container">
             <span className="grid-item name-heading">Name</span>
             <span className="grid-item phone-heading">Phone</span>
+           
+
           </div>
 
           {
@@ -35,6 +37,8 @@ function App() {
               return <div className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
+                <button className="custom-btn delete-btn">Delete</button>
+                
                 </div>
             })
           }
