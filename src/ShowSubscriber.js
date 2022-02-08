@@ -1,18 +1,28 @@
 import Header from "./Header";
-import './App.css';
+import './ShowSubscriber.css';
 import { render } from "@testing-library/react";
 import { Component } from "react/cjs/react.production.min";
 import './common.css'
+import './ShowSubscriber.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      subscribersListToShow: []
-    };
-  }
+
+class ShowSubscriber extends Component {
+
+
+  // componentDidMount(){
+  //   let newSubscriber = {
+  //     id: 1,
+  //     name: 'Rutuja Patil',
+  //     phone: '99999999999'
+  //   }
+  //   let subscribersList = this.state.subscribersListToShow;
+  //   subscribersList.push(newSubscriber);
+  //   this.setState({subscribersListToShow: subscribersList});
+
+  // }
 
   render(){
+    //console.log('render Called')
   // let subscribers = [
   //   {
   //     name: 'Rutuja',
@@ -33,9 +43,10 @@ class App extends Component {
 
 
         </div>
+        {
 
-        {this.state.subscribersListToShow.map(sub => {
-          return <div className="grid-container">
+          this.props.subscribersList.map(sub => {
+          return <div key={sub.id} className="grid-container">
             <span className="grid-item">{sub.name}</span>
             <span className="grid-item">{sub.phone}</span>
             <button className="custom-btn delete-btn">Delete</button>
@@ -51,4 +62,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default ShowSubscriber;
